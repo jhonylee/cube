@@ -4,8 +4,11 @@
 #include "init.h"
 void display();
 int main(int argc,char** argv){
+	windowConf window;
+	viewPosition viewCamera;
 	glutInit(&argc,argv);
-	initProgram();
+	initProgram(	&window,
+					&viewCamera);
 	glutCreateWindow(argv[0]);
 	glutDisplayFunc(display);
 	glutMainLoop();
